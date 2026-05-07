@@ -153,7 +153,16 @@ h2 {
     gap: 10px;
     justify-content: center;
     padding: 1rem;
+    margin: 0;
     border-bottom: 1px solid var(--border);
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.course-controls legend {
+    position: absolute;
+    left: -9999px;
 }
 
 .filter-button {
