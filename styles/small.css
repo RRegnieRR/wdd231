@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #1c1c1c;
+    --background: #f6f3ec;
+    --primary: #2a6061;
+    --primary-dark: #1d4e4f;
+    --accent: #a4243b;
+    --tan: #d8c99b;
+    --card: #fffdf9;
+    --border: #e4e0d8;
+    --heading: "Merriweather", Georgia, serif;
+    --body: "Roboto", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body);
+    color: var(--text);
+    background: var(--background);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--primary);
+    color: var(--card);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.brand img {
+    width: 56px;
+    height: 56px;
+}
+
+.menu-button {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 253, 247, .45);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--card);
+    font-size: 1.8rem;
+}
+
+.menu-button::before {
+    content: "\2630";
+}
+
+.menu-button.open::before {
+    content: "X";
+}
+
+.navigation {
+    display: none;
+    background: var(--primary-dark);
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation a {
+    display: block;
+    padding: .95rem 1rem;
+    color: var(--card);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-top: 1px solid rgba(255, 253, 247, .15);
+}
+
+.navigation a:hover,
+.navigation a.active {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+main {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 {
+    margin: .5rem 0 1rem;
+    color: var(--accent);
+    font-size: 2rem;
+    font-family: var(--heading);
+    letter-spacing: .3px;
+}
+
+h2 {
+    margin: 0;
+    padding: .75rem 1rem;
+    border-radius: 8px 8px 0 0;
+    background: var(--primary);
+    color: var(--card);
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: var(--heading);
+    letter-spacing: .2px;
+}
+
+.top-sections {
+    display: grid;
+    gap: 1rem;
+}
+
+.card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    box-shadow: none;
+}
+
+.about p {
+    margin: 1rem;
+    line-height: 1.55;
+}
+
+.photo {
+    text-align: center;
+}
+
+.photo img {
+    display: block;
+    width: min(100%, 320px);
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 4px;
+}
+
+.certificate {
+    margin-top: 1rem;
+}
+
+.course-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.filter-button {
+    min-width: 80px;
+    padding: .65rem 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    background: var(--card);
+    color: var(--text);
+    font-weight: 700;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.course-grid {
+    display: grid;
+    gap: 10px;
+    padding: 1rem;
+}
+
+.course-card {
+    min-height: 60px;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-left: 8px solid var(--accent);
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.course-card.completed {
+    border-left-color: var(--primary);
+    background: #f3eedc;
+}
+
+.course-card h3 {
+    margin: 0 0 .35rem;
+    color: var(--primary-dark);
+    font-size: 1rem;
+}
+
+.course-card p {
+    margin: 0;
+    font-size: .9rem;
+}
+
+.credit-total {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+footer {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1rem;
+    background: var(--primary);
+    color: var(--card);
+    text-align: center;
+}
+
+footer p {
+    margin: .35rem 0;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: .75rem;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.social img {
+    width: 28px;
+    height: 28px;
+}

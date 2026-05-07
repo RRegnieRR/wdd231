@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="description" content="WDD 231 course home page of Luis Regnier with course progress and links to class projects.">
+    <meta name="author" content="Luis Regnier">
+    <title>WDD 231 Course Home Page | Luis Regnier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <div class="brand">
+            <img src="images/site-logo.svg" alt="WDD 231 site logo" width="64" height="64">
+            <span>Luis Regnier</span>
+        </div>
+        <button id="menu" class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"></button>
+    </header>
+
+    <nav id="primary-navigation" class="navigation" aria-label="Primary navigation">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="chamber/index.html">Chamber</a>
+        <a href="final/index.html">Final</a>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="top-sections">
+            <section class="card about">
+                <h2>About Me</h2>
+                <p>My name is Luis Regnier. I am studying web and software development through BYU-Pathway. I like learning how websites are put together and how JavaScript can make a page more useful.</p>
+                <p>This page is for my WDD 231 class work and will link to the larger projects later in the semester.</p>
+            </section>
+
+            <section class="card photo">
+                <h2>Student Photo</h2>
+                <img src="images/profile.webp" alt="Portrait of Luis Regnier" width="320" height="320">
+            </section>
+        </div>
+
+        <section class="card certificate">
+            <h2>Web Certificate Courses</h2>
+            <div class="course-controls" aria-label="Course filter controls">
+                <button type="button" class="filter-button active" data-filter="all">All</button>
+                <button type="button" class="filter-button" data-filter="wdd">WDD</button>
+                <button type="button" class="filter-button" data-filter="cse">CSE</button>
+            </div>
+            <div id="courses" class="course-grid"></div>
+            <p id="credit-total" class="credit-total"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://github.com/regnierp/wdd231" aria-label="GitHub repository">
+                <img src="images/github.svg" alt="" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/in/regnierp/" aria-label="LinkedIn profile">
+                <img src="images/linkedin.svg" alt="" width="32" height="32">
+            </a>
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+                <img src="images/youtube.svg" alt="" width="32" height="32">
+            </a>
+        </div>
+        <p>&copy;<span id="currentyear"></span> Luis Regnier 🧑‍💻| Mexico</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
