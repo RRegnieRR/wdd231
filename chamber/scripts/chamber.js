@@ -63,6 +63,8 @@ if (gridButton && listButton) {
         members.classList.remove("list-view");
         gridButton.classList.add("active");
         listButton.classList.remove("active");
+        gridButton.setAttribute("aria-pressed", "true");
+        listButton.setAttribute("aria-pressed", "false");
     });
 
     listButton.addEventListener("click", () => {
@@ -70,6 +72,8 @@ if (gridButton && listButton) {
         members.classList.remove("grid-view");
         listButton.classList.add("active");
         gridButton.classList.remove("active");
+        listButton.setAttribute("aria-pressed", "true");
+        gridButton.setAttribute("aria-pressed", "false");
     });
 }
 
