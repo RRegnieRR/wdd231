@@ -5,14 +5,14 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #1b1b1b;
-    background: #f4f1ea;
+    color: #1f2933;
+    background: #f7f4ef;
 }
 
 header,
 footer {
     padding: 1rem;
-    background: #2a6061;
+    background: #264653;
     color: white;
     text-align: center;
 }
@@ -35,15 +35,15 @@ main {
 
 section {
     padding: 1rem;
-    border: 1px solid #d7d0c4;
+    border: 1px solid #d8d2c6;
     border-radius: 8px;
-    background: white;
+    background: #ffffff;
     text-align: center;
 }
 
 h2 {
     margin: 0 0 .75rem;
-    color: #a4243b;
+    color: #264653;
     font-size: 1.3rem;
 }
 

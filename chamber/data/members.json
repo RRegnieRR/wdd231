@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Mercado Tapatio Foods",
+      "address": "Calle Morelos 215, Centro, Guadalajara",
+      "phone": "+52 33 5550 1122",
+      "website": "https://example.com/mercado-tapatio",
+      "image": "image.jpg",
+      "membership": 3,
+      "description": "Local food supplier serving restaurants and small markets around the city."
+    },
+    {
+      "name": "Jalisco Tech Studio",
+      "address": "Av. Lopez Mateos 400, Chapalita, Guadalajara",
+      "phone": "+52 33 5550 2244",
+      "website": "https://example.com/jalisco-tech",
+      "image": "image.jpg",
+      "membership": 2,
+      "description": "Web development and technology consulting for small businesses."
+    },
+    {
+      "name": "Vallarta Print Shop",
+      "address": "Av. Vallarta 780, Americana, Guadalajara",
+      "phone": "+52 33 5550 3366",
+      "website": "https://example.com/vallarta-print",
+      "image": "image.jpg",
+      "membership": 1,
+      "description": "Print services for posters, menus, signs, and local advertising."
+    },
+    {
+      "name": "Minerva Boutique Hotel",
+      "address": "Calle Lopez Cotilla 982, Guadalajara",
+      "phone": "+52 33 5550 4488",
+      "website": "https://example.com/minerva-hotel",
+      "image": "image.jpg",
+      "membership": 3,
+      "description": "Small hotel for visitors staying near the business district."
+    },
+    {
+      "name": "Agave Accounting Group",
+      "address": "Calle Argentina 108, Ladron de Guevara, Guadalajara",
+      "phone": "+52 33 5550 5599",
+      "website": "https://example.com/agave-accounting",
+      "image": "image.jpg",
+      "membership": 2,
+      "description": "Accounting, taxes, and payroll help for local companies."
+    },
+    {
+      "name": "Centro Fitness Club",
+      "address": "Calle Juarez 320, Centro, Guadalajara",
+      "phone": "+52 33 5550 6711",
+      "website": "https://example.com/centro-fitness",
+      "image": "image.jpg",
+      "membership": 1,
+      "description": "Fitness center with wellness classes and community programs."
+    },
+    {
+      "name": "Tlaquepaque Artisan Market",
+      "address": "Calle Independencia 45, Tlaquepaque",
+      "phone": "+52 33 5550 7822",
+      "website": "https://example.com/artisan-market",
+      "image": "image.jpg",
+      "membership": 3,
+      "description": "Group of local artists selling handmade products and gifts."
+    }
+  ]
+}

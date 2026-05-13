@@ -1,0 +1,48 @@
+@media screen and (min-width: 700px) {
+    header {
+        padding: .8rem 2rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav a {
+        min-width: auto;
+        padding: .25rem 0;
+        border-top: none;
+        border-left: none;
+    }
+
+    .grid-view {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #members.list-view section {
+        grid-template-columns: 1.4fr 1.8fr 1fr 1fr .9fr 2fr;
+        align-items: center;
+    }
+
+    #members.list-view h3,
+    #members.list-view p,
+    #members.list-view a {
+        margin: 0;
+    }
+
+    footer {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        text-align: left;
+    }
+
+    footer div:last-child {
+        text-align: left;
+    }
+}

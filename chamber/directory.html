@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guadalajara Chamber of Commerce member directory with local business information.">
+    <meta name="author" content="Luis Regnier">
+    <meta property="og:title" content="Guadalajara Chamber of Commerce Directory">
+    <meta property="og:description" content="Find businesses and organizations that support the Guadalajara business community.">
+    <meta property="og:image" content="https://regnierp.github.io/wdd231/chamber/images/guadalajara-chamber.png">
+    <meta property="og:url" content="https://regnierp.github.io/wdd231/chamber/directory.html">
+    <title>Directory | Guadalajara Chamber of Commerce</title>
+    <link rel="icon" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="images/favicon.svg" alt="Guadalajara Chamber logo" width="56" height="56">
+            <span>Guadalajara Chamber of Commerce</span>
+        </div>
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="directory.html" class="active" aria-current="page">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html">Discover</a>
+        </nav>
+        <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"></button>
+    </header>
+
+    <main>
+        <h1>Business Directory</h1>
+        <section class="directory-intro">
+            <h2>Guadalajara Members</h2>
+            <p>These businesses are part of the Guadalajara Chamber of Commerce and help support the local economy.</p>
+        </section>
+
+        <div class="view-buttons">
+            <button id="grid" type="button" class="active">Grid</button>
+            <button id="list" type="button">List</button>
+        </div>
+
+        <section id="members" class="grid-view" aria-label="Chamber member directory"></section>
+    </main>
+
+    <footer>
+        <div>
+            <p><strong>Guadalajara Chamber of Commerce</strong></p>
+            <p>Av. Vallarta 1234</p>
+            <p>Guadalajara, Jalisco, Mexico</p>
+            <p>info@guadalajarachamber.org</p>
+            <p>+52 33 1234 5678</p>
+        </div>
+        <div class="social-links" aria-label="Social links">
+            <a href="https://www.youtube.com/" aria-label="YouTube">
+                <img src="images/youtube.svg" alt="" width="32" height="32">
+            </a>
+            <a href="https://x.com/" aria-label="X">
+                <img src="images/1280px-X_logo_2023.svg.png" alt="" width="32" height="32">
+            </a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="" width="32" height="32">
+            </a>
+        </div>
+        <div>
+            <p>WDD 231 Class Project</p>
+            <p>Luis Regnier</p>
+            <p>&copy;<span id="year"></span> Guadalajara Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
