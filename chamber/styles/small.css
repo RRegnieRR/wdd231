@@ -186,7 +186,7 @@ h1 {
 #members a {
     display: inline-block;
     margin: .4rem 0;
-    color: var(--accent);
+    color: var(--primary);
     font-weight: 700;
 }
 
