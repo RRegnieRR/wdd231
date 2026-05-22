@@ -97,6 +97,52 @@ main {
     padding: 1rem;
 }
 
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 360px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    background: var(--primary-dark);
+    color: var(--card);
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    background: rgba(29, 55, 65, .82);
+}
+
+.hero h1 {
+    margin: 0 0 .5rem;
+    color: var(--card);
+}
+
+.hero p {
+    margin: 0 0 1rem;
+    line-height: 1.45;
+}
+
+.cta {
+    display: inline-block;
+    padding: .75rem 1rem;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-decoration: none;
+}
+
 h1 {
     margin: .5rem 0 1rem;
     color: var(--primary);
@@ -128,6 +174,65 @@ h1 {
 .directory-intro p {
     margin: 1rem;
     line-height: 1.55;
+}
+
+.home-grid,
+.spotlight-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.info-panel,
+.spotlight-area {
+    margin-bottom: 1rem;
+}
+
+.info-panel,
+.spotlight-grid section {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-left: 8px solid var(--accent);
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.info-panel h2,
+.spotlight-area h2 {
+    margin: 0 0 .75rem;
+    color: var(--primary-dark);
+    font-family: var(--heading);
+    font-size: 1.35rem;
+}
+
+.info-panel p,
+.spotlight-grid p {
+    margin: .4rem 0;
+    line-height: 1.5;
+}
+
+.spotlight-grid {
+    text-align: center;
+}
+
+.spotlight-grid img {
+    display: block;
+    width: 160px;
+    height: 100px;
+    margin: 0 auto .75rem;
+    object-fit: contain;
+}
+
+.spotlight-grid h3 {
+    margin: .25rem 0 .5rem;
+    color: var(--primary-dark);
+}
+
+.spotlight-grid a {
+    display: inline-block;
+    margin: .35rem 0;
+    color: var(--primary);
+    font-weight: 700;
+    overflow-wrap: anywhere;
 }
 
 .view-buttons {

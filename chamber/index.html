@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guadalajara Chamber of Commerce member directory with local business information.">
+    <meta name="description" content="Guadalajara Chamber of Commerce home page.">
     <meta name="author" content="Luis Regnier">
-    <meta property="title" content="Guadalajara Chamber of Commerce Directory">
-    <meta property="description" content="Find businesses and organizations that support the Guadalajara business community.">
-    <meta property="image" content="https://regnierp.github.io/wdd231/chamber/directory.html">
-    <meta property="og:url" content="https://regnierp.github.io/wdd231/chamber/directory.html">
-    <title>Directory | Guadalajara Chamber of Commerce</title>
+    <meta property="og:title" content="Guadalajara Chamber of Commerce">
+    <meta property="og:description" content="Connect with Guadalajara businesses, events, and chamber member spotlights.">
+    <meta property="og:image" content="https://regnierp.github.io/wdd231/chamber/images/hero-image.webp">
+    <meta property="og:url" content="https://regnierp.github.io/wdd231/chamber/index.html">
+    <title>Home | Guadalajara Chamber of Commerce</title>
     <link rel="icon" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
             <span>Guadalajara Chamber of Commerce</span>
         </div>
         <nav id="navigation">
-            <a href="index.html">Home</a>
-            <a href="directory.html" class="active" aria-current="page">Directory</a>
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <a href="directory.html">Directory</a>
             <a href="join.html">Join</a>
             <a href="discover.html">Discover</a>
         </nav>
@@ -35,18 +35,35 @@
     </header>
 
     <main>
-        <h1>Business Directory</h1>
-        <section class="directory-intro">
-            <h2>Guadalajara Members</h2>
-            <p>These businesses are part of the Guadalajara Chamber of Commerce and help support the local economy.</p>
+        <section class="hero">
+            <img src="images/hero-image.webp" alt="Guadalajara city skyline" width="1600" height="1067">
+            <div class="hero-content">
+                <h1>Guadalajara Chamber of Commerce</h1>
+                <p>Helping local businesses in Guadalajara.</p>
+                <a class="cta" href="join.html">Join the Chamber</a>
+            </div>
         </section>
 
-        <div class="view-buttons">
-            <button id="grid" type="button" class="active" aria-pressed="true">Grid</button>
-            <button id="list" type="button" aria-pressed="false">List</button>
+        <div class="home-grid">
+            <section class="info-panel events">
+                <h2>Current Events</h2>
+                <p><strong>Small Business Roundtable</strong></p>
+                <p>Meet with local owners this Friday at 9:00 a.m.</p>
+                <p><strong>Expo Guadalajara Mixer</strong></p>
+                <p>Meet other chamber members next Thursday from 6:00 to 8:00 p.m.</p>
+            </section>
+
+            <section class="info-panel weather">
+                <h2>Weather</h2>
+                <p><strong>Guadalajara</strong></p>
+                <p>Weather details will be added here.</p>
+            </section>
         </div>
 
-        <section id="members" class="grid-view" aria-label="Chamber member directory"></section>
+        <section class="spotlight-area">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights" class="spotlight-grid" aria-label="Gold and silver chamber member spotlights"></div>
+        </section>
     </main>
 
     <footer>

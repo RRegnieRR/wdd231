@@ -21,6 +21,25 @@
         border-left: none;
     }
 
+    .hero,
+    .hero img {
+        min-height: 430px;
+        height: 430px;
+    }
+
+    .hero-content {
+        max-width: 560px;
+        padding: 1.5rem 2rem;
+    }
+
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .spotlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .grid-view {
         grid-template-columns: repeat(3, 1fr);
     }
