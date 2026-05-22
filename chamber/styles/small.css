@@ -97,6 +97,11 @@ main {
     padding: 1rem;
 }
 
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
 .hero {
     position: relative;
     overflow: hidden;
