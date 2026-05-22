@@ -38,31 +38,38 @@
         <section class="hero">
             <img src="images/hero-image.webp" alt="Guadalajara city skyline" width="1600" height="1067">
             <div class="hero-content">
-                <h1>Guadalajara Chamber of Commerce</h1>
-                <p>Helping local businesses in Guadalajara.</p>
                 <a class="cta" href="join.html">Join the Chamber</a>
             </div>
         </section>
 
+        <h1>Home</h1>
+
         <div class="home-grid">
             <section class="info-panel events">
-                <h2>Current Events</h2>
+                <h2>Events</h2>
                 <p><strong>Small Business Roundtable</strong></p>
                 <p>Meet with local owners this Friday at 9:00 a.m.</p>
                 <p><strong>Expo Guadalajara Mixer</strong></p>
                 <p>Meet other chamber members next Thursday from 6:00 to 8:00 p.m.</p>
             </section>
 
-            <section class="info-panel weather">
-                <h2>Weather</h2>
-                <p><strong>Guadalajara</strong></p>
-                <p>Weather details will be added here.</p>
+            <section class="info-panel current-weather">
+                <h2>Current Weather</h2>
+                <img id="weather-icon" src="images/favicon.svg" alt="">
+                <p><strong><span id="current-temp"></span></strong></p>
+                <p id="weather-desc"></p>
+                <p>Guadalajara, Mexico</p>
+            </section>
+
+            <section class="info-panel weather-forecast">
+                <h2>Weather Forecast</h2>
+                <div id="forecast"></div>
             </section>
         </div>
 
         <section class="spotlight-area">
             <h2>Member Spotlights</h2>
-            <div id="spotlights" class="spotlight-grid" aria-label="Gold and silver chamber member spotlights"></div>
+            <div id="spotlights" class="spotlight-grid"></div>
         </section>
     </main>
 

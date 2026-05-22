@@ -23,17 +23,17 @@
 
     .hero,
     .hero img {
-        min-height: 430px;
-        height: 430px;
+        min-height: 280px;
+        height: 280px;
     }
 
     .hero-content {
-        max-width: 560px;
-        padding: 1.5rem 2rem;
+        right: 2rem;
+        bottom: 2rem;
     }
 
     .home-grid {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr 1fr;
     }
 
     .spotlight-grid {
