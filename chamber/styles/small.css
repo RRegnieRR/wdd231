@@ -347,6 +347,156 @@ h1 {
     overflow-wrap: anywhere;
 }
 
+.join-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.join-form,
+.thankyou-card {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+}
+
+.join-form h2,
+.membership-levels h2,
+.thankyou-card h2 {
+    margin: 0;
+    padding: .75rem 1rem;
+    background: var(--primary);
+    color: var(--card);
+    font-family: var(--heading);
+    font-size: 1.25rem;
+}
+
+.join-form form {
+    display: grid;
+    gap: .8rem;
+    padding: 1rem;
+}
+
+.join-form label {
+    display: grid;
+    gap: .35rem;
+    font-weight: 700;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    width: 100%;
+    padding: .65rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font: inherit;
+}
+
+.join-form input[type="submit"] {
+    border: none;
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.membership-levels {
+    display: grid;
+    gap: 1rem;
+}
+
+.level-card {
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-left: 8px solid var(--accent);
+    border-radius: 8px;
+    background: var(--card);
+    animation: show-card .8s ease-out both;
+}
+
+.level-card:nth-of-type(2) {
+    animation-delay: .15s;
+}
+
+.level-card:nth-of-type(3) {
+    animation-delay: .3s;
+}
+
+.level-card:nth-of-type(4) {
+    animation-delay: .45s;
+}
+
+.level-card h3 {
+    margin: 0 0 .4rem;
+    color: var(--primary-dark);
+}
+
+.level-card p {
+    margin: .4rem 0;
+}
+
+.level-card a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+@keyframes show-card {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+dialog {
+    max-width: 420px;
+    width: calc(100% - 2rem);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--card);
+    color: var(--text);
+}
+
+dialog::backdrop {
+    background: rgb(0 0 0 / 55%);
+}
+
+dialog h2 {
+    margin-top: 0;
+    color: var(--primary);
+    font-family: var(--heading);
+}
+
+dialog button {
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+.thankyou-card {
+    padding-bottom: 1rem;
+}
+
+.thankyou-card p,
+#application-results {
+    margin: 1rem;
+}
+
+#application-results p {
+    margin: .5rem 0;
+    padding: .5rem;
+    border-left: 5px solid var(--accent);
+    background: #f7f4ef;
+}
+
 footer {
     display: grid;
     gap: 1rem;

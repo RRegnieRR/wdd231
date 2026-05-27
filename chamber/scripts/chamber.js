@@ -9,6 +9,8 @@ const currentTemp = document.querySelector("#current-temp");
 const weatherDesc = document.querySelector("#weather-desc");
 const forecast = document.querySelector("#forecast");
 const weatherIcon = document.querySelector("#weather-icon");
+const timestamp = document.querySelector("#timestamp");
+const applicationResults = document.querySelector("#application-results");
 const myKey = "99eef65b0994f68f9446e9fd8ae5ec1e";
 const myLat = "20.6597";
 const myLon = "-103.3496";
@@ -166,6 +168,28 @@ if (currentTemp) {
     getWeather();
 }
 
+if (timestamp) {
+    timestamp.value = new Date().toISOString();
+}
+
+document.querySelectorAll("[data-modal]").forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+        let modal = document.querySelector(`#${link.dataset.modal}`);
+        modal.showModal();
+    });
+});
+
+document.querySelectorAll(".close-modal").forEach((button) => {
+    button.addEventListener("click", () => {
+        button.closest("dialog").close();
+    });
+});
+
+if (applicationResults) {
+    displayApplication();
+}
+
 async function getWeather() {
     try {
         const response = await fetch(weatherUrl);
@@ -227,4 +251,17 @@ function getForecastDayLabel(date, index) {
 
 function toTitleCase(value) {
     return value.replace(/\w\S*/g, (word) => word.charAt(0).toUpperCase() + word.slice(1));
+}
+
+function displayApplication() {
+    const formInfo = new URLSearchParams(window.location.search);
+    const submittedDate = new Date(formInfo.get("timestamp"));
+
+    applicationResults.innerHTML = `
+        <p><strong>Name:</strong> ${formInfo.get("first")} ${formInfo.get("last")}</p>
+        <p><strong>Email:</strong> ${formInfo.get("email")}</p>
+        <p><strong>Mobile Phone:</strong> ${formInfo.get("phone")}</p>
+        <p><strong>Business:</strong> ${formInfo.get("business")}</p>
+        <p><strong>Submitted:</strong> ${submittedDate.toLocaleString()}</p>
+    `;
 }
