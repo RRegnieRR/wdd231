@@ -28,17 +28,32 @@ if (menuButton) {
 }
 
 async function getMembers() {
-    const response = await fetch(membersUrl);
-    const data = await response.json();
-    if (members) {
-        displayMembers(data.members);
-    }
-    if (spotlights) {
-        displaySpotlights(data.members);
+    try {
+        const response = await fetch(membersUrl);
+        if (!response.ok) {
+            throw new Error("Member data could not be loaded.");
+        }
+
+        const data = await response.json();
+        if (members) {
+            displayMembers(data.members);
+        }
+        if (spotlights) {
+            displaySpotlights(data.members);
+        }
+    } catch (error) {
+        if (members) {
+            members.innerHTML = "<p>Member information is not available right now.</p>";
+        }
+        if (spotlights) {
+            spotlights.innerHTML = "<p>Spotlight information is not available right now.</p>";
+        }
     }
 }
 
 function displayMembers(memberList) {
+    members.innerHTML = "";
+
     memberList.forEach((member) => {
         let card = document.createElement("section");
         let logo = document.createElement("img");
@@ -71,6 +86,8 @@ function displayMembers(memberList) {
 }
 
 function displaySpotlights(memberList) {
+    spotlights.innerHTML = "";
+
     let qualifiedMembers = [];
 
     memberList.forEach((member) => {
@@ -152,37 +169,62 @@ if (currentTemp) {
 async function getWeather() {
     try {
         const response = await fetch(weatherUrl);
+        if (!response.ok) {
+            throw new Error("Current weather could not be loaded.");
+        }
+
         const data = await response.json();
         currentTemp.innerHTML = `${data.main.temp.toFixed(0)}&deg;C`;
-        weatherDesc.textContent = data.weather[0].description;
+        weatherDesc.textContent = toTitleCase(data.weather[0].description);
         const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
         weatherIcon.setAttribute("src", iconsrc);
         weatherIcon.setAttribute("alt", data.weather[0].description);
     } catch (error) {
-        console.log(error);
+        currentTemp.textContent = "Unavailable";
+        weatherDesc.textContent = "Weather data could not be loaded.";
+        weatherIcon.setAttribute("alt", "Weather unavailable");
     }
 
     try {
         const response = await fetch(forecastUrl);
+        if (!response.ok) {
+            throw new Error("Forecast could not be loaded.");
+        }
+
         const data = await response.json();
         displayForecast(data.list);
     } catch (error) {
-        console.log(error);
+        forecast.innerHTML = "<p>Forecast data could not be loaded.</p>";
     }
 }
 
 function displayForecast(weatherList) {
     let daysShown = 0;
+    forecast.innerHTML = "";
 
     weatherList.forEach((item) => {
         if (item.dt_txt.includes("12:00:00") && daysShown < 3) {
             let p = document.createElement("p");
             let date = new Date(item.dt_txt);
-            let day = date.toLocaleDateString("en-US", { weekday: "short" });
+            let day = getForecastDayLabel(date, daysShown);
 
             p.innerHTML = `${day}: <strong>${item.main.temp.toFixed(0)}&deg;C</strong>`;
             forecast.appendChild(p);
             daysShown++;
         }
     });
+}
+
+function getForecastDayLabel(date, index) {
+    if (index === 0) {
+        return "Today";
+    }
+    if (index === 1) {
+        return "Tomorrow";
+    }
+    return date.toLocaleDateString("en-US", { weekday: "long" });
+}
+
+function toTitleCase(value) {
+    return value.replace(/\w\S*/g, (word) => word.charAt(0).toUpperCase() + word.slice(1));
 }
