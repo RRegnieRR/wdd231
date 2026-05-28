@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for applying to join the Guadalajara Chamber of Commerce.">
+    <meta name="description" content="Discover Guadalajara attractions, landmarks, and local places of interest for chamber visitors.">
     <meta name="author" content="Luis Regnier">
-    <meta property="og:title" content="Thank You | Guadalajara Chamber of Commerce">
-    <meta property="og:description" content="Thank you page for the Guadalajara Chamber of Commerce membership application.">
+    <meta property="og:title" content="Discover Guadalajara | Guadalajara Chamber of Commerce">
+    <meta property="og:description" content="Explore local places of interest in Guadalajara for residents, visitors, and chamber members.">
     <meta property="og:image" content="https://rregnierr.github.io/wdd231/chamber/images/hero-image.webp">
-    <meta property="og:url" content="https://rregnierr.github.io/wdd231/chamber/thankyou.html">
-    <title>Thank You | Guadalajara Chamber of Commerce</title>
+    <meta property="og:url" content="https://rregnierr.github.io/wdd231/chamber/discover.html">
+    <title>Discover | Guadalajara Chamber of Commerce</title>
     <link rel="icon" href="images/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
 </head>
 <body>
     <header>
@@ -29,18 +30,21 @@
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
             <a href="join.html">Join</a>
-            <a href="discover.html">Discover</a>
+            <a href="discover.html" class="active" aria-current="page">Discover</a>
         </nav>
         <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navigation"></button>
     </header>
 
     <main>
-        <h1>Thank You</h1>
-        <section class="thankyou-card">
-            <h2>Your Application Was Sent</h2>
-            <p>Thank you for applying to join the Guadalajara Chamber of Commerce. We will contact you soon.</p>
-            <div id="application-results"></div>
+        <h1>Discover Guadalajara</h1>
+
+        <section class="discover-intro">
+            <h2>Places to Visit</h2>
+            <p>Guadalajara has historic places, cultural spaces, markets, parks, and business areas that help make the city active and interesting.</p>
+            <p id="visit-message"></p>
         </section>
+
+        <div id="discover-cards" class="discover-grid"></div>
     </main>
 
     <footer>
