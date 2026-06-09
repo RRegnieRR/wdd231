@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Áurea Joyería to ask about necklace availability, gifts, product details, and purchase interest.">
+    <meta name="author" content="Luis Regnier">
+    <meta property="og:title" content="Áurea Joyería | Contact">
+    <meta property="og:description" content="Send a jewelry question or purchase-interest message to Áurea Joyería.">
+    <meta property="og:image" content="https://regnierp.github.io/wdd231/final/images/logo-small.png">
+    <meta property="og:url" content="https://regnierp.github.io/wdd231/final/contact.html">
+    <title>Áurea Joyería | Contact</title>
+    <link rel="icon" href="images/logo_2.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body data-page="contact">
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo-small.png" alt="Áurea Joyería logo" width="160" height="154">
+                <span>Áurea</span>
+            </a>
+            <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"></button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html" data-page="home">Home</a>
+                <a href="products.html" data-page="products">Products</a>
+                <a href="contact.html" data-page="contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-grid">
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h1>Ask About a Piece</h1>
+                <p class="lead">Use the form to ask about necklace availability, a gift idea, or a specific product. The confirmation page will display your submitted entries using URL search parameters.</p>
+                <div class="panel">
+                    <h2>Store Details</h2>
+                    <p><strong>Instagram:</strong> @aurea_joyeria_oficial</p>
+                    <p><strong>Focus:</strong> Minimalist necklaces, premium finishes, gift-ready pieces</p>
+                    <p><strong>Response:</strong> Product questions and order interest</p>
+                </div>
+            </div>
+
+            <form id="contact-form" class="contact-card panel" action="thankyou.html" method="get">
+                <div class="form-grid">
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div>
+                        <label for="interest">Interest</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Choose one</option>
+                            <option value="Product availability">Product availability</option>
+                            <option value="Gift recommendation">Gift recommendation</option>
+                            <option value="Care information">Care information</option>
+                            <option value="Purchase question">Purchase question</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="budget">Budget</label>
+                        <select id="budget" name="budget" required>
+                            <option value="">Choose one</option>
+                            <option value="Under $300">Under $300</option>
+                            <option value="$300 - $500">$300 - $500</option>
+                            <option value="$500 - $700">$500 - $700</option>
+                            <option value="$700+">$700+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="preferred-contact">Preferred Contact</label>
+                        <select id="preferred-contact" name="preferred-contact" required>
+                            <option value="">Choose one</option>
+                            <option value="Email">Email</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                        </select>
+                    </div>
+                    <div class="full">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required minlength="10"></textarea>
+                    </div>
+                    <label class="checkbox-row full">
+                        <input type="checkbox" id="consent" name="consent" value="yes" required>
+                        <span>I understand this is a student project form and agree to submit this message.</span>
+                    </label>
+                </div>
+                <button class="button" type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p><strong>Áurea Joyería</strong></p>
+                <p>&copy;<span id="year"></span> Luis Regnier | WDD 231</p>
+                <p id="last-modified"></p>
+            </div>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="video.html">Video Demo</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

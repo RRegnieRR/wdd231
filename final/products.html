@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the Áurea Joyería catalog with minimalist necklaces, charm pendants, pearl details, and gold-tone pieces.">
+    <meta name="author" content="Luis Regnier">
+    <meta property="og:title" content="Áurea Joyería | Product Catalog">
+    <meta property="og:description" content="Browse dynamic jewelry product data from Áurea Joyería collections.">
+    <meta property="og:image" content="https://regnierp.github.io/wdd231/final/images/logo-small.png">
+    <meta property="og:url" content="https://regnierp.github.io/wdd231/final/products.html">
+    <title>Áurea Joyería | Products</title>
+    <link rel="icon" href="images/logo_2.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <script type="module" src="scripts/main.js"></script>
+</head>
+<body data-page="products">
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo-small.png" alt="Áurea Joyería logo" width="160" height="154">
+                <span>Áurea</span>
+            </a>
+            <button id="menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation"></button>
+            <nav id="primary-navigation" aria-label="Primary navigation">
+                <a href="index.html" data-page="home">Home</a>
+                <a href="products.html" data-page="products">Products</a>
+                <a href="contact.html" data-page="contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-header">
+            <p class="eyebrow">Catalog</p>
+            <h1>Products</h1>
+            <p class="lead">Browse the current necklace selection and open any piece to view more details. Your selected collection is saved on this device.</p>
+        </section>
+
+        <section class="premium-section" aria-labelledby="catalog-heading">
+            <div class="catalog-tools">
+                <div>
+                    <label for="collection-filter">Filter by collection</label>
+                    <select id="collection-filter" name="collection-filter"></select>
+                </div>
+                <p id="product-count" class="visit-note"></p>
+            </div>
+            <h2 id="catalog-heading">Necklace Catalog</h2>
+            <div id="product-grid" class="product-grid"></div>
+        </section>
+
+        <dialog id="product-modal" aria-label="Product details">
+            <div class="modal-shell">
+                <div id="modal-content"></div>
+                <div class="modal-actions">
+                    <button id="close-modal" class="text-button" type="button">Close</button>
+                </div>
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p><strong>Áurea Joyería</strong></p>
+                <p>&copy;<span id="year"></span> Luis Regnier | WDD 231</p>
+                <p id="last-modified"></p>
+            </div>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="video.html">Video Demo</a>
+                <a href="siteplan.html">Site Plan</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
