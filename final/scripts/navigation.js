@@ -8,6 +8,7 @@ export function setupNavigation(pageName) {
             const isOpen = navigation.classList.toggle("open");
             menuButton.classList.toggle("open", isOpen);
             menuButton.setAttribute("aria-expanded", isOpen.toString());
+            menuButton.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
         });
     }
 
@@ -31,4 +32,3 @@ export function setFooterDates() {
         modified.textContent = `Last modified: ${document.lastModified}`;
     }
 }
-
